@@ -24,8 +24,8 @@
   }
   
   .header { grid-area: header;
-    display: grid;
-background-color: rgba(33, 73, 35, 0.92); 
+    display: grid; 
+background: linear-gradient(70deg, rgba(2, 70, 6, 0.92), rgb(61, 142, 112));
 font-size: 30px;
 border-style: double;
 }
@@ -34,22 +34,35 @@ strong {
   }
   .buscador { grid-area: buscador;
     display: flexbox;
-background-color: rgba(82, 124, 109, 1);
+    background: radial-gradient(rgb(61, 142, 112), rgb(138, 138, 198));
 border-style: double;
 }
+@keyframes button {
+    from {background-color: rgb(178,34,34)}
+    to {background-color: rgb(42, 4, 53);}
+
+}
+
 button {
-    background-color: rgba(168, 221, 230, 0.92);
+    background-color:rgb(178,34,34) ;
     text-decoration:solid;
      border-radius: 4px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-}
+    transition:ease-out 0.3s;
+    animation-name: button;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  margin-top: 6px;
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+    }
+
 .novedades  {
     grid-area: novedades;
     display: flexbox;
     align-items: center;
-    background-color: rgba(82, 124, 109, 1);
+   background: radial-gradient(rgb(61, 142, 112), rgb(138, 138, 198));
     border-style:double;
 
 }
@@ -136,6 +149,5 @@ grid-auto-flow: column;
         flex-direction: column;
         align-items:flex-start;
         text-align: start;
-}
-
+    }
 }
